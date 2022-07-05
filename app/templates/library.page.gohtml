@@ -1,0 +1,94 @@
+{{template "base" .}}
+
+{{define "title"}}
+    Perpustakaan
+{{end}}
+
+{{define "content"}}
+<div class="container py-5">
+
+  <div class="row mb-4">
+    <div class="col-lg-8 mx-auto text-center">
+      <h1 class="display-4">Perpustakaan</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-7 mx-auto">
+      <div class="bg-white rounded-lg shadow-sm p-5">
+        <!-- Perpus form content -->
+        <div class="tab-content">
+            <form role="form">
+
+              <div class="form-group">
+                <label for="username">Nama Buku</label>
+                <input type="text" name="namaBuku" placeholder="Ujang Jeprut" required class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label for="cardNumber">Penerbit</label>
+                <div class="input-group">
+                  <input type="text" name="penerbit" placeholder="Gramedia" class="form-control" required>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <input type="number" placeholder="MM" name="month" class="form-control" required>
+                      <input type="number" placeholder="YY" name="year" class="form-control" required>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <button type="button" class="search btn btn-primary btn-block rounded-pill shadow-sm"> Search  </button>
+                </div>
+
+              </div>
+              
+            </form>
+          <!-- End -->
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">No</th>
+                <th scope="col">Nama Buku</th>
+                <th scope="col">Penerbit</th>
+                <th scope="col">Tanggal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>Aug 2022</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>Mar 2021</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>Sept 2022</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- End -->
+
+      </div>
+    </div>
+  </div>
+</div>
+{{end}}
+
+{{define "js"}}
+    
+{{end}}
