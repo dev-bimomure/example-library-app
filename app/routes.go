@@ -9,7 +9,7 @@ import (
 func (app *application) routes() http.Handler {
 	mux := httprouter.New()
 
-	mux.GET("/library", app.Library)
+	mux.GET("/library/book", app.Library)
 
 	return mux
 }

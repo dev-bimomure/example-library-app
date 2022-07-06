@@ -5,6 +5,7 @@
 {{end}}
 
 {{define "content"}}
+{{$books := index .Data "books"}}
 <div class="container py-5">
 
   <div class="row mb-4">
@@ -60,23 +61,12 @@
               </tr>
             </thead>
             <tbody>
+             <!-- Loop Here -->
               <tr>
                 <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>Aug 2022</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>Mar 2021</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>Sept 2022</td>
+                <td>{{$books.Name}}</td>
+                <td>{{$books.Publisher}}</td>
+                <td>{{$books.Date}}</td>
               </tr>
             </tbody>
           </table>
